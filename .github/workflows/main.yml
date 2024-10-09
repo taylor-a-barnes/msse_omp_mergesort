@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: Test MPI Sort Algorithm
+    name: Test OpenMP Merge Sort Algorithm
     steps:
       - name: Checkout
         uses: actions/checkout@v4
