@@ -77,6 +77,14 @@ int main(int argc, char *argv[]) {
   for ( int ivalue = 0; ivalue < nvalues; ivalue += 1000) {
     std::cout << "   Index: " << ivalue << "   Value: " << sortvec[ivalue] << std::endl;
   }
+
+  // Verify that there are no errors in the ordering
+  for (int i = 1; i < nvalues; i++) {
+    if ( sortvec[i] < sortvec[i-1] ) {
+      std::cerr << "ERROR: VALUES " << i-1 << " AND " << i << " ARE MISORDERED." << std::endl;
+    }
+  }
+
   std::cout << "Total walltime: " << walltime << std::endl;
 
 }
