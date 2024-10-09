@@ -25,19 +25,19 @@ jobs:
           cmake ..
           cmake --build .
 
-      - name: Run the code on a single rank
+      - name: Run the code on a single thread
         run: |
           cd build
           export OMP_NUM_THREADS=1
           ./mergesort
 
-      - name: Run the code on three ranks
+      - name: Run the code on three threads
         run: |
           cd build
           export OMP_NUM_THREADS=3
           ./mergesort
 
-      - name: Run the code on four ranks
+      - name: Run the code on four threads
         run: |
           cd build
           export OMP_NUM_THREADS=4
